@@ -2,17 +2,17 @@ name: hello universe
 on:
   Push:
     branches:
-      -main
+      - main
   workflow_dispatch:
 jobs:
   build_and_test:
     runs-on: ububtu-20.04
     steps:
-      -name: clone code
-      uses: actions/checkout@v2
-      -name: compile Java File
-      shell: bash
-      run: javac Main.java
-      -name: Run The Java File
-      shell: bash
-      run: java Main
+      - name: clone code
+        uses: actions/checkout@v2
+      - name: compile Java File
+        shell: bash
+        run: javac Main.java
+      - name: Run The Java File
+        shell: bash
+        run: java Main
